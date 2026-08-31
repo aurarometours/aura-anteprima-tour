@@ -187,6 +187,11 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
 .endcta .btn.line:hover{background:var(--paper);color:var(--ink)}
 .secnote{font-size:13px;color:var(--ink3);margin-top:16px;max-width:70ch}
 @media(prefers-reduced-motion:reduce){.ocard .med video{display:none}.it-row,.ocard,.areas a,.btn{transition:none}}
+
+@media(max-width:900px){nav.links a[data-hide]{display:none}}
+@media(max-width:620px){nav.links{display:none}.cta-nav{margin-left:auto}.top-in{gap:12px}}
+@media(max-width:430px){.bands{gap:6px}.band{padding:11px 5px}.band b{font-size:18px}.band small{font-size:8.5px;letter-spacing:.06em}.btn{padding:14px 22px;font-size:11.5px}.cta-row{gap:8px}figure.arch{padding:10px;border-radius:170px 170px 14px 14px}figure.arch video,figure.arch img{border-radius:160px 160px 8px 8px}}
+@media(max-width:560px){.endcta{flex-direction:column;align-items:flex-start;text-align:left}.endcta .cta-row{width:100%}.revhead{gap:8px}}
 </style>
 </head>
 <body>
@@ -198,10 +203,10 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
   </a>
   <nav class="links">
     <a href="https://www.aurarometours.it/">Home</a>
-    <a href="https://www.aurarometours.it/#tours" class="on">Experiences</a>
+    <a href="https://www.aurarometours.it/#tours" class="on" data-hide>Experiences</a>
     <a href="https://www.aurarometours.it/tours/">Tours</a>
-    <a href="https://www.aurarometours.it/esplora/">Explore</a>
-    <a href="https://www.aurarometours.it/recensioni/">Reviews</a>
+    <a href="https://www.aurarometours.it/esplora/" data-hide>Explore</a>
+    <a href="https://www.aurarometours.it/recensioni/" data-hide>Reviews</a>
     <a href="https://www.aurarometours.it/faq/">FAQ</a>
     <a href="https://www.aurarometours.it/contatti/">Contact</a>
   </nav>
@@ -224,7 +229,7 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
       </div>
     </div>
     <figure class="arch"><div class="vwrap">
-      <video data-src="https://www.aurarometours.it/media/video500.mp4" poster="/media/tour-500.jpg" muted loop playsinline preload="none" aria-label="Tour in 500"></video>
+      <video data-src="https://www.aurarometours.it/media/video500.mp4" poster="https://www.aurarometours.it/media/tour-500.jpg" muted loop playsinline preload="none" aria-label="Tour in 500"></video>
     </div></figure>
   </div>
 </div></div>
@@ -283,7 +288,7 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
   <div class="foot-grid">
     <div class="foot-brand"><span class="b1">Aura</span><p>Private Rome, by golf cart. Exclusive tours of the historic centre with a dedicated driver.</p></div>
     <div><h4>The Tours</h4><a href="la-grande-bellezza.html">La Grande Bellezza</a><a href="full-roma-experience.html">Full Roma Experience</a><a href="roma-by-night.html">Roma by Night</a><a href="tour-su-misura.html">Tour Su Misura</a><a href="tour-in-500.html">Tour in 500</a></div>
-    <div><h4>Discover</h4><a href="https://www.aurarometours.it/tours/">Tours</a><a href="https://www.aurarometours.it/esplora/">Explore</a><a href="https://www.aurarometours.it/guide/">Guides</a><a href="https://www.aurarometours.it/blog/">Blog</a><a href="https://www.aurarometours.it/recensioni/">Reviews</a></div>
+    <div><h4>Discover</h4><a href="https://www.aurarometours.it/tours/">Tours</a><a href="https://www.aurarometours.it/esplora/" data-hide>Explore</a><a href="https://www.aurarometours.it/guide/">Guides</a><a href="https://www.aurarometours.it/blog/">Blog</a><a href="https://www.aurarometours.it/recensioni/" data-hide>Reviews</a></div>
     <div><h4>Contact</h4><a href="https://www.aurarometours.it/contatti/">Contact</a><a href="https://www.aurarometours.it/faq/">FAQ</a><a href="https://www.aurarometours.it/for-hotels/">For hotels</a></div>
   </div>
   <div class="foot-bottom"><span>&copy; <span id="yy"></span> Aura Rome Tours &middot; Roma</span><span>Visa &middot; Mastercard &middot; Amex &middot; Apple Pay &middot; Google Pay</span></div>
