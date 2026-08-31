@@ -192,6 +192,57 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
 @media(max-width:620px){nav.links{display:none}.cta-nav{margin-left:auto}.top-in{gap:12px}}
 @media(max-width:430px){.bands{gap:6px}.band{padding:11px 5px}.band b{font-size:18px}.band small{font-size:8.5px;letter-spacing:.06em}.btn{padding:14px 22px;font-size:11.5px}.cta-row{gap:8px}figure.arch{padding:10px;border-radius:170px 170px 14px 14px}figure.arch video,figure.arch img{border-radius:160px 160px 8px 8px}}
 @media(max-width:560px){.endcta{flex-direction:column;align-items:flex-start;text-align:left}.endcta .cta-row{width:100%}.revhead{gap:8px}}
+/* ---------- MOBILE ---------- */
+@media(max-width:900px){
+  .hero-grid{display:flex;flex-direction:column;gap:20px}
+  .hero-grid>figure.arch{order:-1;max-width:100%;width:100%;margin:0;padding:10px;border-radius:200px 200px 16px 16px}
+  .hero-grid>figure.arch video,.hero-grid>figure.arch img{aspect-ratio:4/4.3;border-radius:190px 190px 10px 10px}
+  .hero-grid>div{display:flex;flex-direction:column}
+  .hero-grid>div>.meta-chips{order:1;margin:0 0 16px}
+  .hero-grid>div>.bands{order:2;max-width:none}
+  .hero-grid>div>.ppg{order:3;margin:9px 0 18px}
+  .hero-grid>div>.cta-row{order:4}
+  .hero-grid>div>.desc{order:5;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+  .phero{padding-top:clamp(22px,5vw,40px)}
+  .sub{margin-top:14px}
+}
+@media(max-width:760px){
+  .mbook{display:flex}
+  body{padding-bottom:80px}
+  #aura-wa-fab{display:none!important}
+  #aura-chat-fab{bottom:96px!important}
+  .cta-row .btn{flex:1;min-width:0}
+  section{padding:clamp(28px,6vw,44px) 0}
+  h2.sh{margin-bottom:18px}
+  .it-txt p{font-size:13.5px}
+  .faqs summary{padding:16px 18px;font-size:14.5px}
+  .faqs .a{padding:0 18px 17px;font-size:13.5px}
+  .areas a{padding:10px 16px;font-size:13.5px}
+  .rev{padding:20px}
+  .tw>div{padding:20px}
+}
+@media(max-width:430px){
+  .bands{gap:6px}
+  .band{padding:12px 5px}
+  .band b{font-size:19px}
+  .band small{font-size:8.5px;letter-spacing:.05em}
+  .meta-chips span{font-size:11.5px;padding:7px 12px}
+  .crumb{font-size:10px;letter-spacing:.12em}
+}
+/* barra prenotazione fissa, solo mobile */
+.mbook{display:none;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;
+  padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
+  background:rgba(247,242,233,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);box-shadow:0 -10px 30px rgba(29,22,15,.10)}
+.mbook .p{flex:none;line-height:1.1}
+.mbook .p small{display:block;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+.mbook .p b{font-family:var(--serif);font-size:22px;display:block;margin-top:1px}
+.mbook .p i{font-style:normal;font-size:10.5px;color:var(--ink3)}
+.mbook .sp{flex:1}
+.mbook .wa{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;flex:none}
+.mbook .wa svg{width:23px;height:23px;display:block}
+.mbook .btn{padding:15px 24px;font-size:12px;flex:none}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.mbook{background:#F7F2E9}}
 </style>
 </head>
 <body>
@@ -348,5 +399,7 @@ document.getElementById('yy').textContent = new Date().getFullYear();
   }
 })();
 </script>
+
+<div class="mbook"><div class="p"><small>From</small><b>&euro;390</b><i>3h · 10 stops</i></div><div class="sp"></div><a class="wa" href="https://wa.me/393206891014?text=Hi%20Aura!%20I%27d%20like%20to%20check%20availability" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Z" stroke="#1D160F" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.6 7.6c.3-.1.6 0 .8.3l.9 1.4c.2.3.1.6-.1.8l-.5.5a.5.5 0 0 0-.1.6 7 7 0 0 0 2.7 2.7c.2.1.4.1.6-.1l.5-.5c.2-.2.5-.3.8-.1l1.4.9c.3.2.4.5.3.8-.3.8-1.1 1.4-2 1.4-3.3 0-6.7-3.4-6.7-6.7 0-.9.6-1.7 1.4-2Z" fill="#1D160F"/></svg></a><button class="btn fill" onclick="AURA.openBooking('full_roma')">Book</button></div>
 </body>
 </html>
