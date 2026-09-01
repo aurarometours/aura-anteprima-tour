@@ -192,6 +192,21 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
 @media(max-width:620px){nav.links{display:none}.cta-nav{margin-left:auto}.top-in{gap:12px}}
 @media(max-width:430px){.bands{gap:6px}.band{padding:11px 5px}.band b{font-size:18px}.band small{font-size:8.5px;letter-spacing:.06em}.btn{padding:14px 22px;font-size:11.5px}.cta-row{gap:8px}figure.arch{padding:10px;border-radius:170px 170px 14px 14px}figure.arch video,figure.arch img{border-radius:160px 160px 8px 8px}}
 @media(max-width:560px){.endcta{flex-direction:column;align-items:flex-start;text-align:left}.endcta .cta-row{width:100%}.revhead{gap:8px}}
+/* barra prenotazione fissa, solo mobile */
+.mbook{display:none;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;
+  padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
+  background:rgba(247,242,233,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);box-shadow:0 -10px 30px rgba(29,22,15,.10)}
+.mbook .p{flex:none;line-height:1.1}
+.mbook .p small{display:block;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+.mbook .p b{font-family:var(--serif);font-size:22px;display:block;margin-top:1px}
+.mbook .p i{font-style:normal;font-size:10.5px;color:var(--ink3)}
+.mbook .sp{flex:1}
+.mbook .wa{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;flex:none}
+.mbook .wa svg{width:23px;height:23px;display:block}
+.mbook .btn{padding:15px 24px;font-size:12px;flex:none}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.mbook{background:#F7F2E9}}
+
 /* ---------- MOBILE ---------- */
 @media(max-width:900px){
   .hero-grid{display:flex;flex-direction:column;gap:20px}
@@ -229,20 +244,6 @@ figure.arch figcaption{position:absolute;left:50%;bottom:14px;transform:translat
   .meta-chips span{font-size:11.5px;padding:7px 12px}
   .crumb{font-size:10px;letter-spacing:.12em}
 }
-/* barra prenotazione fissa, solo mobile */
-.mbook{display:none;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;
-  padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
-  background:rgba(247,242,233,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-  border-top:1px solid var(--line);box-shadow:0 -10px 30px rgba(29,22,15,.10)}
-.mbook .p{flex:none;line-height:1.1}
-.mbook .p small{display:block;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-weight:700}
-.mbook .p b{font-family:var(--serif);font-size:22px;display:block;margin-top:1px}
-.mbook .p i{font-style:normal;font-size:10.5px;color:var(--ink3)}
-.mbook .sp{flex:1}
-.mbook .wa{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;flex:none}
-.mbook .wa svg{width:23px;height:23px;display:block}
-.mbook .btn{padding:15px 24px;font-size:12px;flex:none}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.mbook{background:#F7F2E9}}
 </style>
 </head>
 <body>
